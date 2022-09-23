@@ -284,13 +284,13 @@ Hands-on practice quest #01: pre-built disk image lifecycle <sup>30 + 5</sup>
 docker image ls # TODO: собственные пометки участников для будущего использования в проектах
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как стянуть образ на машину?"
 ```shell
 docker image pull alpine
 docker image ls
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как посмотреть истортю образа?"
 ```shell
 docker image history alpine
 
@@ -298,7 +298,7 @@ docker image inspect alpine
 docker image inspect --format='{{.Id}} -> {{.Parent}}' alpine
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как запустить контейнер?"
 ```shell
 docker container run --name demo -it alpine
 /# touch side-effect.txt
