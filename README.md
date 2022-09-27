@@ -314,12 +314,12 @@ docker image tag {{ registry-account }}/demo:latest {{ registry-account }}/demo:
 docker image ls
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как запушить изменения?"
 ```shell
 docker image push {{ registry-account }}/demo:1.0.0
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как удалить все образы?"
 ```shell
 docker image ls
 docker container rm demo
