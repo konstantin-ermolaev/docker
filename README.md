@@ -152,13 +152,13 @@ open https://hub.docker.com/settings/security # to make Access Token
 docker login -u {{ registry-account }} -p {{ access-token }} # login default hub.docker.com registry
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как стянуть образ на машину?"
 ```shell
 docker image pull alpine
 docker system df
 ````
 
-- Сценарий "Как ...?"
+- Сценарий "Как запустить контейнер в интерактивном режиме?"
 ```shell
 docker container ls [--all]
 docker container run --name demo -it alpine
@@ -166,7 +166,7 @@ docker container run --name demo -it alpine
 /# exit 
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как удалить контейнер?"
 ```shell
 docker container ls [--all]
 docker container rm [--force] demo
@@ -298,7 +298,7 @@ docker image inspect alpine
 docker image inspect --format='{{.Id}} -> {{.Parent}}' alpine
 ```
 
-- Сценарий "Как запустить контейнер?"
+- Сценарий "Как запустить контейнер, внести изменения и закоммитить их?"
 ```shell
 docker container run --name demo -it alpine
 /# touch side-effect.txt
@@ -308,7 +308,7 @@ docker container commit demo {{ registry-account }}/demo
 docker image ls
 ```
 
-- Сценарий "Как ...?"
+- Сценарий "Как поменять тэг?"
 ```shell
 docker image tag {{ registry-account }}/demo:latest {{ registry-account }}/demo:1.0.0
 docker image ls
